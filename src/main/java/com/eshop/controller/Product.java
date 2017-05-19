@@ -1,0 +1,117 @@
+package com.eshop.controller;
+
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.util.Iterator;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.eshop.dao.CatDao;
+import com.eshop.dao.ProDao;
+import com.eshop.dao.SupDao;
+import com.eshop.model.CategoryDetails;
+import com.eshop.model.ProductDetails;
+import com.eshop.model.SupplierDetails;
+
+@Controller
+public class Product 
+{
+	@Autowired
+	SupDao sd;
+	
+	@Autowired
+	ProDao pd;
+	
+	@Autowired
+	CatDao cd;
+	
+	@RequestMapping(value="/pro",method=RequestMethod.GET)
+	public ModelAndView pro()
+	{
+		ProductDetails p=new ProductDetails();
+		
+		List l=cd.retriveCategory();
+		/*Iterator i=l.iterator();
+		while(i.hasNext())
+		{
+			Object o=i.next();
+			CategoryDetails c1=(CategoryDetails)o;
+			System.out.println(c1.getCategorydescription());
+		}*/
+	
+		
+		List l1=sd.retireveSupplier();
+		/*Iterator i1=l1.iterator();
+		while(i1.hasNext())
+		{
+			Object o=i1.next();
+			SupplierDetails s1=(SupplierDetails)o;
+			System.out.println(s1.getSdis());
+		}*/
+		List l2=pd.retriveProduct();
+		ModelAndView mv=new ModelAndView("product","ProductDetails",p);
+		mv.addObject("catData",l );
+		mv.addObject("supData",l1);
+		mv.addObject("proData",l2);
+		
+		return mv;
+	}
+	
+	@RequestMapping(value="/pro",method=RequestMethod.POST)
+	public ModelAndView prodet(@ModelAttribute("ProductDetails") ProductDetails p)
+	{
+		List l=cd.retriveCategory();
+		List l1=sd.retireveSupplier();
+		List l2=pd.retriveProduct();
+		System.out.println(l1);
+		ProductDetails p1=new ProductDetails();
+		ModelAndView mv=new ModelAndView("product","ProductDetails",p1);
+		mv.addObject("catData",l );
+		mv.addObject("supData",l1);
+		mv.addObject("proData",l2);
+		pd.proDetails(p);
+	
+		
+	String path="E:\\Web Project\\ecart\\src\\main\\webapp\\resources\\image\\";
+	path=path+String.valueOf(p.getProductId())+".jpg";
+	MultipartFile file=p.getPimage();
+	File f=new File(path);
+	try {
+		FileOutputStream fos=new FileOutputStream(f);
+		BufferedOutputStream bos=new BufferedOutputStream(fos);
+		byte[] b=file.getBytes();
+		bos.write(b);
+		bos.close();
+	} 
+	catch (Exception e)
+	{
+		
+	}
+	
+	return mv;
+}
+	@RequestMapping("/deladprod")
+	public ModelAndView deleteprod(@RequestParam("adpid")int pid)
+	{
+		pd.deleteProduct(pid);
+		List l=cd.retriveCategory();
+		List l1=sd.retireveSupplier();
+		List l2=pd.retriveProduct();
+		ProductDetails p1=new ProductDetails();
+		ModelAndView mv=new ModelAndView("product","ProductDetails",p1);
+		mv.addObject("catData",l );
+		mv.addObject("supData",l1);
+		mv.addObject("proData",l2);
+		return mv;
+	}
+}
