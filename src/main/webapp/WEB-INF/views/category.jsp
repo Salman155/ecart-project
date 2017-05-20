@@ -19,7 +19,7 @@
 <tr><td>categoryid:</td><td><form:input path="categoryId"/></td></tr>
 <tr><td>categorydescription:</td><td><form:input path="categoryDescription"/></td></tr>
 
-<tr><td><input type="submit" value="Submit"/></td></tr>
+<tr><td><input type="submit" value="${bname}"/></td></tr>
 </table>
 </form:form>
 
@@ -41,7 +41,7 @@
                  <td>${category.categoryName}</td>
                 <td>${category.categoryDescription}</td>
              
-                     <td><a href="UpdateAdmprod?adpid=${category.categoryId}">Edit</a></td>
+                     <td><a href="deladcat1?adcid1=${category.categoryId}">Edit</a></td>
                 <td><a href="deladcat?adcid=${category.categoryId}">Delete</a></td>
                
 </tr>

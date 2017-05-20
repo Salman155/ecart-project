@@ -4,6 +4,7 @@ import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -63,7 +64,7 @@ public class Product
 		mv.addObject("catData",l );
 		mv.addObject("supData",l1);
 		mv.addObject("proData",l2);
-		
+		mv.addObject("bname", "ADD Product");
 		return mv;
 	}
 	
@@ -79,6 +80,7 @@ public class Product
 		mv.addObject("catData",l );
 		mv.addObject("supData",l1);
 		mv.addObject("proData",l2);
+		mv.addObject("bname", "ADD Product");
 		pd.proDetails(p);
 	
 		
@@ -112,6 +114,54 @@ public class Product
 		mv.addObject("catData",l );
 		mv.addObject("supData",l1);
 		mv.addObject("proData",l2);
+		mv.addObject("bname", "ADD Product");
 		return mv;
 	}
+	
+	
+	@RequestMapping("/deladprod1")
+	public ModelAndView editprod(@RequestParam("adpid1")int pid)
+	{
+		ProductDetails p1=	pd.editProduct(pid);
+		List l=cd.retriveCategory();
+		List l1=sd.retireveSupplier();
+		List l2=pd.retriveProduct();
+		
+		ModelAndView mv=new ModelAndView("product","ProductDetails",p1);
+		mv.addObject("catData",l );
+		mv.addObject("supData",l1);
+		mv.addObject("proData",l2);
+		mv.addObject("bname", "Update Product");
+		return mv;
+	}
+	
+	@RequestMapping(value="/product",method=RequestMethod.GET)
+	public ModelAndView pro1()
+	{
+		ProductDetails p=new ProductDetails();
+		
+		List l=cd.retriveCategory();
+		List l1=sd.retireveSupplier();
+		List l2=pd.retriveProduct();
+		ModelAndView mv=new ModelAndView("prohome","ProductDetails",p);
+		mv.addObject("catData",l );
+		mv.addObject("supData",l1);
+		mv.addObject("proData",l2);
+		mv.addObject("bname", "ADD Product");
+		return mv;
+	}
+	
+	@RequestMapping(value="/image",method=RequestMethod.GET)
+	public ModelAndView getImage(@RequestParam("img")int pImage)
+	{
+		ProductDetails p=pd.editProduct(pImage);
+		List l=new ArrayList();
+		l.add(p);
+		ModelAndView mv=new ModelAndView("single","ProductDetails",l);
+		return mv;
+	}
+	
+	
+		
+	
 }

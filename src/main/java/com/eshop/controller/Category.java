@@ -30,6 +30,7 @@ public class Category
 		List l=cd.retriveCategory();
 		ModelAndView mv=new ModelAndView("category","CategoryDetails",c);
 		mv.addObject("catData",l );
+		mv.addObject("bname", "ADD Category");
 		return mv;
 	}
 	
@@ -42,6 +43,7 @@ public class Category
 		ModelAndView mv=new ModelAndView("category","CategoryDetails",c1);
 		cd.insertDetails(c);
 		mv.addObject("catData",l );
+		mv.addObject("bname", "ADD Category");
 		return mv;
 	}
 	
@@ -53,8 +55,18 @@ public class Category
 		CategoryDetails c1=new CategoryDetails();
 		ModelAndView mv=new ModelAndView("category","CategoryDetails",c1);
 		mv.addObject("catData",l );
+		mv.addObject("bname", "ADD Category");
 		return mv;
 	}
 	
-	
+	@RequestMapping("/deladcat1")
+	public ModelAndView editprod(@RequestParam("adcid1")int cid)
+	{
+		CategoryDetails c1=cd.editCategory(cid);
+		List l=cd.retriveCategory();
+		ModelAndView mv=new ModelAndView("category","CategoryDetails",c1);
+		mv.addObject("catData",l );
+		mv.addObject("bname", "UpdateCategory");
+		return mv;
+	}
 }

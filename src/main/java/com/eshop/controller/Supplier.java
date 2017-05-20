@@ -26,6 +26,7 @@ public class Supplier
 		List l1=sd.retireveSupplier();
 		ModelAndView mv=new ModelAndView("supplier","SupplierDetails",s);
 		mv.addObject("supData",l1);
+		mv.addObject("bname", "ADD Supplier");
 		return mv;
 	}
 	
@@ -39,17 +40,20 @@ public class Supplier
 		
 		System.out.println(s.getsId());
 		mv.addObject("supData",l1);
+		mv.addObject("bname", "ADD Supplier");
 		return mv;
 	}
 	
-	@RequestMapping("/deladsup")
-	public ModelAndView deleteprod(@RequestParam("adsid")int sid)
+
+	@RequestMapping("/deladsup1")
+	public ModelAndView editprod(@RequestParam("adsid1")int sid)
 	{
-		sd.deleteSupplier(sid);
-		SupplierDetails s1=new SupplierDetails();
+	
+		SupplierDetails s1=sd.editSupplier(sid);
 		List l1=sd.retireveSupplier();
 		ModelAndView mv=new ModelAndView("supplier","SupplierDetails",s1);
 		mv.addObject("supData",l1);
+		mv.addObject("bname", "Update Supplier");
 		return mv;
 	}
 	

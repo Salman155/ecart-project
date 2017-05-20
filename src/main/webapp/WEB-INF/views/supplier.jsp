@@ -19,7 +19,7 @@
 <tr><td>sname:</td><td><form:input path="sName"/></td></tr>
 <tr><td>sdis:</td><td><form:input path="sDis"/></td></tr>
 
-<tr><td><input type="submit" value="Submit"/></td></tr>
+<tr><td><input type="submit" value="${bname}"/></td></tr>
 </table>
 </form:form>
 
@@ -40,7 +40,7 @@
                  <td>${supplier.sName}</td>
                 <td>${supplier.sDis}</td>
              
-                     <td><a href="UpdateAdmprod?adpid=${supplier.sId}">Edit</a></td>
+                     <td><a href="deladsup1?adsid1=${supplier.sId}">Edit</a></td>
                 <td><a href="deladsup?adsid=${supplier.sId}">Delete</a></td>
                
 </tr>

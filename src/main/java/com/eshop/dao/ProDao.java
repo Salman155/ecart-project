@@ -20,7 +20,7 @@ SessionFactory sessionfactory;
   {
   Session s=sessionfactory.openSession();
   Transaction t=s.beginTransaction();
-  s.save(p);
+  s.saveOrUpdate(p);
   t.commit();
   s.close();
 	}
@@ -46,5 +46,13 @@ SessionFactory sessionfactory;
 		session.delete(p);
 		t.commit();
 		session.close();
+  }
+  
+  public ProductDetails editProduct(int productid)
+  {
+	  Session session=sessionfactory.openSession();
+		Transaction t=session.beginTransaction();
+		ProductDetails p=(ProductDetails)session.get(ProductDetails.class,productid);
+		return p;
   }
 }

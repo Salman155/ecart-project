@@ -23,17 +23,11 @@
     
     
       <li class="active"><a href="home"><span class="fa fa-home" style="font-size:26px"></span></a></li>
+       
        <li class="dropdown"><a href="admin">Admin</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page  <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          
-          <li><a href="#">IPhone</a></li>
-          <li><a href="#">Samsung</a></li>
-          <li><a href="#">Micromax</a></li>
-          <li><a href="#">Lava</a></li>
-        </ul>
-        </li>
-        </ul>
+       
+      <li class="dropdown"><a href="product">Product </a></li>
+        
       
       <form class="navbar-form navbar-left">
   <div class="input-group">

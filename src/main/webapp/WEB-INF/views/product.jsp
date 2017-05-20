@@ -42,7 +42,7 @@ SUPPLIER ID:<br>
 					</div>
 				</div>
 
-<input type="submit" value="submit">
+<input type="submit" value="${bname}">
 </form:form>
 
 
@@ -64,7 +64,7 @@ SUPPLIER ID:<br>
                 <td>${product.supID}</td>
                 <td> ${product.categoryId}</td>
                     <td> ${product.productPrice}</td>
-                     <td><a href="UpdateAdmprod?adpid=${product.productId}">Edit</a></td>
+                     <td><a href="deladprod1?adpid1=${product.productId}">Edit</a></td>
                 <td><a href="deladprod?adpid=${product.productId}">Delete</a></td>
                 <td><img src="./resources/image/${product.productId}.jpg" height="50px" width="50px"/></td> 
 

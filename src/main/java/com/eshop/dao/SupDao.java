@@ -24,9 +24,10 @@ public class SupDao
 		Session session=sessionFactory.openSession();
 		Transaction t=session.beginTransaction();
 		System.out.println(ss.getsId());
-		session.save(ss);
+		session.saveOrUpdate(ss);
 		//System.out.println(cc.getCategorydescription()+""+cc.getCategoryid());
 		t.commit();
+		session.close();
 	}
 	public List retireveSupplier()
 	{
@@ -36,6 +37,7 @@ public class SupDao
 		Query query=session.createQuery(hql);
 		List l =query.list();
 		System.out.println(l);
+		session.close();
 		return l;
 	}
 	
@@ -49,6 +51,15 @@ public class SupDao
 			
 			t.commit();
 			session.close();
+	  }
+	 
+	 public SupplierDetails editSupplier(int sid)
+	  {
+		  Session session=sessionFactory.openSession();
+			Transaction t=session.beginTransaction();
+			System.out.println(sid);
+			SupplierDetails s=(SupplierDetails)session.get(SupplierDetails.class,sid);
+			return s;
 	  }
 	
 	}

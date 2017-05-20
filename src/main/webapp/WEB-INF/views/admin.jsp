@@ -16,29 +16,28 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="home"><span class="fa fa-home" style="font-size:26px"></span>Home</a></li>
+      
+      
+         
     
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">CATEGORIES<span class="caret"></span></a>
         <ul class="dropdown-menu">
           
           <li><a href="cat"> Add Category</a></li>
-          <li><a href="cat">Update Category</a></li>
-          <li><a href="cat">Delete Category</a></li>
-     
+         
         </ul>
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="pro">PRODUCT<span class="caret"></span></a>
         <ul class="dropdown-menu">
           
           <li><a href="pro"> Add Product</a></li>
-          <li><a href="pro">Update Product</a></li>
-          <li><a href="pro">Delete Product</a></li>
+        
      
         </ul>
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SUPPLIERS<span class="caret"></span></a>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="supp">SUPPLIERS<span class="caret"></span></a>
         <ul class="dropdown-menu">
           
           <li><a href="supp"> Add Supplier</a></li>
-          <li><a href="supp">Update Supplier</a></li>
-          <li><a href="supp">Delete Supplier</a></li>
+          
      
         </ul>
       </li> 
