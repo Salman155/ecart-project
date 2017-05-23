@@ -23,6 +23,7 @@ public class CategoryDetails
 	@Column(name="CategoryDescription")
 	private String categoryDescription;
 	
+	
 
 	public int getCategoryId() {
 		return categoryId;

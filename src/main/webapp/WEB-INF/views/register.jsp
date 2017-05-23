@@ -18,7 +18,7 @@
     </center>
     <fieldset>
     
-    <!-- Text input-->
+   
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="requestName" style="color:#0000FF">UserId</label>
 					<div class="col-md-4">
@@ -27,7 +27,7 @@
 					<form:errors path="userId" style="color:red;"></form:errors>
 				</div>
 
-				<!-- Text input-->
+				
 				
 
 				<div class="form-group">
@@ -52,7 +52,7 @@
 				</div>
 
         <div class="form-group">
-					<label class="col-md-4 control-label" for="comments" style="color:#0000FF" placeholder="mobile number">Mobile number</label>
+					<label class="col-md-4 control-label" for="comments" style="color:#0000FF">Mobile number</label>
 					<div class="col-md-4">
 					<form:textarea class="form-control" path="mobile" />
 					</div>

@@ -140,14 +140,12 @@ public class Product
 	{
 		ProductDetails p=new ProductDetails();
 		
-		List l=cd.retriveCategory();
-		List l1=sd.retireveSupplier();
+		
 		List l2=pd.retriveProduct();
 		ModelAndView mv=new ModelAndView("prohome","ProductDetails",p);
-		mv.addObject("catData",l );
-		mv.addObject("supData",l1);
+		
 		mv.addObject("proData",l2);
-		mv.addObject("bname", "ADD Product");
+		
 		return mv;
 	}
 	
@@ -156,7 +154,7 @@ public class Product
 	{
 		ProductDetails p=pd.editProduct(pImage);
 		List l=new ArrayList();
-		l.add(p);
+		l.add(p); 
 		ModelAndView mv=new ModelAndView("single","ProductDetails",l);
 		return mv;
 	}

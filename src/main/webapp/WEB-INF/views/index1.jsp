@@ -9,21 +9,31 @@
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      
     </ol>
 
    
     <div class="carousel-inner">
       <div class="item active">
-        <img src="resources/img5.jpg"  style="width:100%;">
+        <img src="resources/5.jpg"  style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="resources/img9.jpg"  style="width:100%;">
+        <img src="resources/4.jpg"  style="width:100%;">
       </div>
     
       <div class="item">
-        <img src="resources/img1.jpg"  style="width:100%;">
+        <img src="resources/1.jpg"  style="width:100%;">
       </div>
+      <div class="item">
+        <img src="resources/6.jpg"  style="width:100%;">
+      </div>
+      <div class="item">
+        <img src="resources/2.jpg"  style="width:100%;">
+      </div>
+     
     </div>
 
     <!-- Left and right controls -->

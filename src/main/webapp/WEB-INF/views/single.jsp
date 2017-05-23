@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="core" %>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -27,9 +30,9 @@
                     <td> ${product.productPrice}</td>
                     
                     
-                <td><a href="image?img="${product.productId}">   
+                <td><a href="image?img=${product.productId}">   
                 <img src="./resources/image/${product.productId}.jpg" height="50px" width="50px"/></a></td> 
-
+                <td><a href="cart?pid=${product.productId}"><button type="button">ADD TO CART</button></a></td>
 
 
 

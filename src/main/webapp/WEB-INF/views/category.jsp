@@ -11,42 +11,58 @@
 <body>
 <%@ include file="admin.jsp"  %>
 <form:form class="form-horizontal" method="post" action="cat"	commandName="CategoryDetails" >
-<centre><tr>
-    <td><h2>CATEGORIES</h2></td>
-    </tr><centre>
-<table>
-<tr><td>categoryname:</td><td><form:input path="categoryName"/></td></tr>
-<tr><td>categoryid:</td><td><form:input path="categoryId"/></td></tr>
-<tr><td>categorydescription:</td><td><form:input path="categoryDescription"/></td></tr>
+<fieldset>
 
-<tr><td><input type="submit" value="${bname}"/></td></tr>
-</table>
+   <div class="form-group">
+					 <label class="col-md-4 control-label" for="requestName" style="color:#0000FF">CATEGORY ID</label>
+					 <div class="col-md-4">
+					 <form:input class="form-control input-md" path="categoryId" ></form:input>
+					 </div>
+				     </div>
+
+ <div class="form-group">
+					 <label class="col-md-4 control-label" for="requestName" style="color:#0000FF">CATEGORY NAME</label>
+					 <div class="col-md-4">
+					 <form:input class="form-control input-md" path="categoryName" ></form:input>
+					 </div>
+				     </div>
+ 
+<div class="form-group">
+					 <label class="col-md-4 control-label" for="requestName" style="color:#0000FF">CATEGORY DESCRIPTION</label>
+					 <div class="col-md-4">
+					 <form:input class="form-control input-md" path="categoryDescription" ></form:input>
+					 </div>
+				     </div>
+ 
+ <div class="form-group">
+					<label class="col-md-4 control-label" for="comments" style="color:#0000FF"></label>
+					<div class="col-md-4">
+					<input type="Submit" class="btn btn-lg btn-info" value="${bname}"></input>				
+					</div>
+					</div>
+
+</fieldset>
 </form:form>
 
 
 <table class="table table-bordered table-hover table-striped">
- <tr><th>Category Id</th>
-
+<tr><th>Category Id</th>
 <th>category Name</th>
 <th>category Description</th>
-
 <th>Edit</th>
 <th>Delete</th>
-
 </tr> 
 <core:forEach items="${catData}" var="category">
 <tr class="success" >
 
                 <td>${category.categoryId}</td> 
-                 <td>${category.categoryName}</td>
+                <td>${category.categoryName}</td>
                 <td>${category.categoryDescription}</td>
-             
-                     <td><a href="deladcat1?adcid1=${category.categoryId}">Edit</a></td>
+                <td><a href="deladcat1?adcid1=${category.categoryId}">Edit</a></td>
                 <td><a href="deladcat?adcid=${category.categoryId}">Delete</a></td>
                
 </tr>
 </core:forEach>
-
 </table>
 </body>
 </html>

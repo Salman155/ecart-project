@@ -10,7 +10,7 @@
 </head>
 <body>
 <%@ include file="userHeader.jsp" %>
-<form:form class="form-horizontal" method="post" action="product" commandName="ProductDetails" enctype="multipart/form-data">
+<form:form class="form-horizontal" method="post" action="pro" commandName="ProductDetails" enctype="multipart/form-data">
 
 <table class="table table-bordered table-hover table-striped">
  <tr><th>Product Id</th>
@@ -32,6 +32,7 @@
                     
                 <td><a href="image?img=${product.productId}">   
                 <img src="./resources/image/${product.productId}.jpg" height="50px" width="50px"/></a></td> 
+                
 
 
 

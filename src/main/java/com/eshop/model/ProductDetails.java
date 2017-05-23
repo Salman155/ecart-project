@@ -44,9 +44,20 @@ public class ProductDetails
 
 	@Column(name="SID")
 	private int supID;
+	
+	@Column(name="Stock")
+	private int stock;
 
     
     
+
+	public int getStock() {
+		return stock;
+	}
+
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
 
 	public int getProductId() {
 		return productId;

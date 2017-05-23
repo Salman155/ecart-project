@@ -11,47 +11,94 @@
 <body>
 <%@ include file="admin.jsp" %>
 <form:form class="form-horizontal" method="post" action="pro" commandName="ProductDetails" enctype="multipart/form-data">
-PRODUCT ID:<br>
-<form:input path="productId"/><br>
-PRODUCT NAME:<br>
-<form:input path="productName"/><br>
-PRODUCT DESCRIPTION:<br>
-<form:input path="productDescription"/><br>
-PRODUCT PRICE:<br>
-<form:input path="productPrice"/><br>
-CATEGORY ID:<br>
-<form:select class="form-control" path="categoryId"><br>
-<form:option value="-1">select category name</form:option>
-<core:forEach items="${catData}" var="cat">
-<form:option value="${cat.categoryId}">${cat.categoryName}</form:option>
-</core:forEach>
-</form:select>
-SUPPLIER ID:<br>
-<form:select class="form-control" path="supID"><br>
-<form:option value="-1">select supplier name</form:option>
-<core:forEach items="${supData}" var="cat">
-<form:option value="${sup.sId}">${sup.sName}</form:option>
-</core:forEach>
-</form:select><br>
-<br>
+<fieldset>
 
-<div class="form-group">
+           <div class="form-group">
+					 <label class="col-md-4 control-label" for="requestName" style="color:#0000FF">Product Id</label>
+					 <div class="col-md-4">
+					 <form:input class="form-control input-md" path="productId" ></form:input>
+					 </div>
+				     </div>
+
+				
+				
+
+		<div class="form-group">
+					<label class="col-md-4 control-label" for="comments" style="color:#0000FF">Product Name</label>
+					<div class="col-md-4">
+					<form:textarea class="form-control" path="productName" />
+					</div>
+				    </div>
+
+		<div class="form-group">
+					<label class="col-md-4 control-label" for="comments" style="color:#0000FF">Product Description</label>
+					<div class="col-md-4">
+					<form:textarea class="form-control" path="productDescription" />
+					</div>
+				</div>
+				
+		<div class="form-group">
+					<label class="col-md-4 control-label" for="comments" style="color:#0000FF">Product Price</label>
+					<div class="col-md-4">
+					<form:textarea class="form-control" path="productPrice" />
+					</div>
+				</div>
+
+        <div class="form-group">
+					<label class="col-md-4 control-label" for="comments" style="color:#0000FF">Product Stock</label>
+					<div class="col-md-4">
+					<form:textarea class="form-control" path="stock" />
+					</div>
+				    </div>
+				    
+	     <div class="form-group">
+					<label class="col-md-4 control-label" for="comments" style="color:#0000FF">CATEGORY NAME</label>
+					<div class="col-md-4">
+					<form:select class="form-control" path="categoryId">
+					<form:option value="-1">select category name</form:option>
+                    <core:forEach items="${catData}" var="cat">
+                    <form:option value="${cat.categoryId}">${cat.categoryName}</form:option>
+                    </core:forEach>
+                    </form:select>
+                    
+					</div>
+				    </div>
+				    
+		  <div class="form-group">
+					<label class="col-md-4 control-label" for="comments" style="color:#0000FF">SUPPLIER NAME</label>
+					<div class="col-md-4">
+					<form:select class="form-control" path="supID">
+					<form:option value="-1">select supplier name</form:option>
+                     <core:forEach items="${supData}" var="sup">
+                     <form:option value="${sup.sId}">${sup.sName}</form:option>
+                     </core:forEach>
+                     </form:select>
+					</div>
+				    </div>
+
+             <div class="form-group">
 					<label class="col-md-4 control-label" for="comments" style="color:#0000FF">Image</label>
 					<div class="col-md-4">
 					<form:input type="file" path="pimage" />
 					</div>
-				</div>
-
-<input type="submit" value="${bname}">
+				    </div>
+				    
+			 <div class="form-group">
+					<label class="col-md-4 control-label" for="comments" style="color:#0000FF">Image</label>
+					<div class="col-md-4">
+					<input type="Submit" class="btn btn-lg btn-info" value="${bname}"></input>				
+					</div>
+					</div>
+	</fieldset>			   
 </form:form>
 
-
 <table class="table table-bordered table-hover table-striped">
- <tr><th>Product Id</th>
+<tr><th>Product Id</th>
 <th>Product name</th>
 <th>Supplier Id</th>
 <th>Category Id</th>
 <th>Price</th>
+<th>stock</th>
 <th>Edit</th>
 <th>Delete</th>
 <th>Image</th>
@@ -60,13 +107,15 @@ SUPPLIER ID:<br>
 <tr class="success" >
 
                 <td>${product.productId}</td> 
-                 <td>${product.productName}</td>
+                <td>${product.productName}</td>
                 <td>${product.supID}</td>
                 <td> ${product.categoryId}</td>
-                    <td> ${product.productPrice}</td>
-                     <td><a href="deladprod1?adpid1=${product.productId}">Edit</a></td>
+                <td> ${product.productPrice}</td>
+                <td> ${product.stock}</td>   
+                
+                <td><a href="deladprod1?adpid1=${product.productId}">Edit</a></td>
                 <td><a href="deladprod?adpid=${product.productId}">Delete</a></td>
-                <td><img src="./resources/image/${product.productId}.jpg" height="50px" width="50px"/></td> 
+                <td><img src="./resources/image/${product.productId}.jpg" height="75px" width="75px"/></td> 
 
 </tr>
 </core:forEach>
