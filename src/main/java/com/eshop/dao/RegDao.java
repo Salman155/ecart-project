@@ -6,6 +6,7 @@ import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.eshop.model.UserCredentials;
 import com.eshop.model.UserDetails;
 
 @Repository
@@ -20,4 +21,14 @@ public void insertUser(UserDetails ud)
 	session.save(ud);
 	t.commit();
 }
+
+public void insertUserCredentails(UserCredentials uc)
+{
+	Session session=sessionFactory.openSession();
+	Transaction t=session.beginTransaction();
+	session.save(uc);
+	t.commit();
+	session.close();
+}
+
 }

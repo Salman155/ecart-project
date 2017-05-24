@@ -57,7 +57,7 @@
                 <td>${supplier.sName}</td>
                 <td>${supplier.sDis}</td>
                 <td><a href="deladsup1?adsid1=${supplier.sId}">Edit</a></td>
-                <td><a href="deladsup?adsid=${supplier.sId}">Delete</a></td>
+                <td><a href="deladsup1?adsid1=${supplier.sId}">Delete</a></td>
                
 </tr>
 </core:forEach>

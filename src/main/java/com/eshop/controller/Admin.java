@@ -15,10 +15,23 @@ import com.eshop.model.AdminDetails;
 public class Admin
 {  
 	@RequestMapping("/admin")
-     String goAdmin()
+    public String goAdmin()
 	{
 	 return "adminHome";	
 	}
+	
+	@RequestMapping("/contact")
+    public String contact()
+	{
+	 return "Contact";	
+	}
+	
+	@RequestMapping("/aboutus")
+    public String aboutus()
+	{
+	 return "aboutus";	
+	}
+	
 	
 	
 	}
