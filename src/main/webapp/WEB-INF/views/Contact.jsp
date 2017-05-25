@@ -22,7 +22,7 @@
             </address>
             <address>
                 <strong>Email</strong><br>
-                <a href="mailto:#">amirsalmankhan07@gmail.com</a>
+                <a>amirsalmankhan07@gmail.com</a>
             </address>
             </form>
         </div>

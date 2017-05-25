@@ -25,7 +25,7 @@ import com.eshop.model.ProductDetails;
 import com.eshop.model.SupplierDetails;
 
 @Controller
-public class Product 
+public class ProductController 
 {
 	@Autowired
 	SupDao sd;

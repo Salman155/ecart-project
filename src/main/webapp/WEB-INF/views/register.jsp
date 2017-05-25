@@ -10,7 +10,7 @@
 </head>
 <body>
 <%@ include file="userHeader.jsp" %>
-<form:form class="form-horizontal" method="post" action="reg"	commandName="UserDetails" >
+<form:form class="form-horizontal" method="post" action="register"	commandName="UserDetails" >
 <center>
     <h1 style="color:red"><b>Registration </b></h1>
     <h2 style="color:red"><b>Create an Account</b></h2>

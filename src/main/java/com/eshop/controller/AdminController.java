@@ -12,7 +12,7 @@ import com.eshop.model.AdminDetails;
 
 
 @Controller
-public class Admin
+public class AdminController
 {  
 	@RequestMapping("/admin")
     public String goAdmin()

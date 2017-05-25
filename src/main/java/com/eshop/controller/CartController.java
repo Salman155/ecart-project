@@ -17,7 +17,7 @@ import com.eshop.model.CartDetails;
 import com.eshop.model.ProductDetails;
 
 @Controller
-public class Cart 
+public class CartController 
 
 {
 	

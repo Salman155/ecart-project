@@ -15,7 +15,7 @@ import com.eshop.model.CategoryDetails;
 import com.eshop.model.SupplierDetails;
 
 @Controller
-public class Supplier 
+public class SupplierController 
 {
 	@Autowired
 	SupDao sd;

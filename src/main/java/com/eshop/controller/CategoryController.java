@@ -16,7 +16,7 @@ import com.eshop.model.CategoryDetails;
 import com.eshop.model.ProductDetails;
 
 @Controller
-public class Category
+public class CategoryController
 {
 	
 	

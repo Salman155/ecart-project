@@ -41,8 +41,8 @@
 </form>
       
        <ul class="nav navbar-nav navbar-right">
-      <li><a href="reg"><span class="glyphicon glyphicon-user"></span>Register</a></li>
-      <li><a href="logn"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="register"><span class="glyphicon glyphicon-user"></span>Register</a></li>
+      <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       <li><a href="contact"><i class="fa fa-phone" aria-hidden="true"></i>Contact us</a></li>
       <li><a href="aboutus"><i class="fa fa-user" aria-hidden="true"></i>About us</a></li>
     </ul>

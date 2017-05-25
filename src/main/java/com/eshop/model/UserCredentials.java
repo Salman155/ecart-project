@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Transient;
+
 
 import org.springframework.stereotype.Component;
 
@@ -20,10 +20,12 @@ public class UserCredentials
 	@Column(name="password")
 	private String password;
 	
-	@Transient
+	@Column(name="role")
 	private String role;
-	@Transient
+	
+	@Column(name="enabled")
 	private boolean enabled;
+	
 	public String getUsername() {
 		return username;
 	}
