@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 
 import com.eshop.model.ProductDetails;
 @Repository
-public class ProDao {
+public class ProductDao {
 @Autowired
 SessionFactory sessionfactory;
   public void proDetails(ProductDetails p)

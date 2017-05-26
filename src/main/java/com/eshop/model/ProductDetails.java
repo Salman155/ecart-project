@@ -45,13 +45,11 @@ public class ProductDetails
 	@Column(name="SID")
 	private int supID;
 	
-	@Column(name="Stock")
+	@Column(name="stock")
 	private int stock;
 
     
-    
-
-	public int getStock() {
+    public int getStock() {
 		return stock;
 	}
 

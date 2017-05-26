@@ -19,7 +19,7 @@ import com.eshop.model.ProductDetails;
 
 
 @Repository
-public class CatDao 
+public class CategoryDao 
 {
 	@Autowired
 	SessionFactory sessionFactory;

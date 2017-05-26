@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.eshop.dao.SupDao;
+import com.eshop.dao.SupplierDao;
 import com.eshop.model.CategoryDetails;
 import com.eshop.model.SupplierDetails;
 
@@ -18,7 +18,7 @@ import com.eshop.model.SupplierDetails;
 public class SupplierController 
 {
 	@Autowired
-	SupDao sd;
+	SupplierDao sd;
 	@RequestMapping(value="/supp",method=RequestMethod.GET)
 	public ModelAndView supp()
 	{

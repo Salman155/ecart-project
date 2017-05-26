@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.eshop.dao.CatDao;
-import com.eshop.dao.ProDao;
-import com.eshop.dao.SupDao;
+import com.eshop.dao.CategoryDao;
+import com.eshop.dao.ProductDao;
+import com.eshop.dao.SupplierDao;
 import com.eshop.model.CategoryDetails;
 import com.eshop.model.ProductDetails;
 import com.eshop.model.SupplierDetails;
@@ -28,13 +28,13 @@ import com.eshop.model.SupplierDetails;
 public class ProductController 
 {
 	@Autowired
-	SupDao sd;
+	SupplierDao sd;
 	
 	@Autowired
-	ProDao pd;
+	ProductDao pd;
 	
 	@Autowired
-	CatDao cd;
+	CategoryDao cd;
 	
 	@RequestMapping(value="/pro",method=RequestMethod.GET)
 	public ModelAndView pro()

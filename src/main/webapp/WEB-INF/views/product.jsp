@@ -14,7 +14,7 @@
 <fieldset>
 
            <div class="form-group">
-					 <label class="col-md-4 control-label" for="requestName" style="color:#0000FF">Product Id</label>
+					 <label class="col-md-4 control-label" for="requestName" style="color:#000000">Product Id</label>
 					 <div class="col-md-4">
 					 <form:input class="form-control input-md" path="productId" ></form:input>
 					 </div>
@@ -24,35 +24,35 @@
 				
 
 		<div class="form-group">
-					<label class="col-md-4 control-label" for="comments" style="color:#0000FF">Product Name</label>
+					<label class="col-md-4 control-label" for="comments" style="color:#000000">Product Name</label>
 					<div class="col-md-4">
 					<form:textarea class="form-control" path="productName" />
 					</div>
 				    </div>
 
 		<div class="form-group">
-					<label class="col-md-4 control-label" for="comments" style="color:#0000FF">Product Description</label>
+					<label class="col-md-4 control-label" for="comments" style="color:#000000">Product Description</label>
 					<div class="col-md-4">
 					<form:textarea class="form-control" path="productDescription" />
 					</div>
 				</div>
 				
 		<div class="form-group">
-					<label class="col-md-4 control-label" for="comments" style="color:#0000FF">Product Price</label>
+					<label class="col-md-4 control-label" for="comments" style="color:#000000">Product Price</label>
 					<div class="col-md-4">
 					<form:textarea class="form-control" path="productPrice" />
 					</div>
 				</div>
 
         <div class="form-group">
-					<label class="col-md-4 control-label" for="comments" style="color:#0000FF">Product Stock</label>
+					<label class="col-md-4 control-label" for="comments" style="color:#000000">Product Stock</label>
 					<div class="col-md-4">
 					<form:textarea class="form-control" path="stock" />
 					</div>
 				    </div>
 				    
 	     <div class="form-group">
-					<label class="col-md-4 control-label" for="comments" style="color:#0000FF">CATEGORY NAME</label>
+					<label class="col-md-4 control-label" for="comments" style="color:#000000">CATEGORY NAME</label>
 					<div class="col-md-4">
 					<form:select class="form-control" path="categoryId">
 					<form:option value="-1">select category name</form:option>
@@ -65,7 +65,7 @@
 				    </div>
 				    
 		  <div class="form-group">
-					<label class="col-md-4 control-label" for="comments" style="color:#0000FF">SUPPLIER NAME</label>
+					<label class="col-md-4 control-label" for="comments" style="color:#000000">SUPPLIER NAME</label>
 					<div class="col-md-4">
 					<form:select class="form-control" path="supID">
 					<form:option value="-1">select supplier name</form:option>
@@ -77,14 +77,14 @@
 				    </div>
 
              <div class="form-group">
-					<label class="col-md-4 control-label" for="comments" style="color:#0000FF">Image</label>
+					<label class="col-md-4 control-label" for="comments" style="color:#000000">Image</label>
 					<div class="col-md-4">
 					<form:input type="file" path="pimage" />
 					</div>
 				    </div>
 				    
 			 <div class="form-group">
-					<label class="col-md-4 control-label" for="comments" style="color:#0000FF">Image</label>
+					<label class="col-md-4 control-label" for="comments" style="color:#000000">Image</label>
 					<div class="col-md-4">
 					<input type="Submit" class="btn btn-lg btn-info" value="${bname}"></input>				
 					</div>

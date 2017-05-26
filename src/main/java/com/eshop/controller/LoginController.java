@@ -12,7 +12,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.eshop.dao.RegDao;
+import com.eshop.dao.LoginDao;
+import com.eshop.dao.RegisterDao;
 
 import com.eshop.model.UserCredentials;
 
@@ -20,8 +21,9 @@ import com.eshop.model.UserCredentials;
 public class LoginController {
 
 	@Autowired
-	RegDao rd;
-	
+	RegisterDao rd;
+	@Autowired
+	LoginDao ld;
 	@RequestMapping("/login")
 	public ModelAndView goLogin()
 	{
@@ -37,8 +39,9 @@ public class LoginController {
 	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/login_session_attributes")
 	public String login_session_attributes(HttpSession session,Model model) {
+		System.out.println("i am in login session");
 		String userid = SecurityContextHolder.getContext().getAuthentication().getName();
-		UserCredentials  user = rd.getUser(userid);
+		UserCredentials  user = ld.getUser(userid);
 		session.setAttribute("userId", user.getUsername());
 		session.setAttribute("name", user.getPassword());
 		session.setAttribute("LoggedIn", "true");
@@ -46,7 +49,7 @@ public class LoginController {
 		 //session.setAttribute("crtcnt",count);
 		Collection<GrantedAuthority> authorities = (Collection<GrantedAuthority>) SecurityContextHolder.getContext().getAuthentication().getAuthorities();
 		String page="";
-		String role="USER_ROLE";
+		String role="ROLE_USER";
 		for (GrantedAuthority authority : authorities) 
 		{
 		  

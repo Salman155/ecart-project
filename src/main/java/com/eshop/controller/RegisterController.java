@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.eshop.dao.RegDao;
+import com.eshop.dao.RegisterDao;
 import com.eshop.model.UserCredentials;
 import com.eshop.model.UserDetails;
 
@@ -19,7 +19,7 @@ public class RegisterController
 	
 	
 	@Autowired
-	RegDao rd;
+	RegisterDao rd;
 	
 	
 	
@@ -51,7 +51,7 @@ public class RegisterController
 	  ModelAndView mv=new ModelAndView("registersucess","UserDetails",u);
 	  
 	  UserCredentials uc=new UserCredentials();
-	  uc.setUsername(u.getUserName());
+	  uc.setUsername(u.getUsername());
 	  uc.setPassword(u.getPassword());
 	  uc.setRole("ROLE_USER");
 	  uc.setEnabled(true);

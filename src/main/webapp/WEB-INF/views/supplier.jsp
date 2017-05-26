@@ -14,28 +14,28 @@
 <fieldset>
 
 <div class="form-group">
-					 <label class="col-md-4 control-label" for="requestName" style="color:#0000FF">SUPPLIER ID</label>
+					 <label class="col-md-4 control-label" for="requestName" style="color:#000000">SUPPLIER ID</label>
 					 <div class="col-md-4">
 					 <form:input class="form-control input-md" path="sId" ></form:input>
 					 </div>
 				     </div>
 
 <div class="form-group">
-					 <label class="col-md-4 control-label" for="requestName" style="color:#0000FF">SUPPLIER NAME</label>
+					 <label class="col-md-4 control-label" for="requestName" style="color:#000000">SUPPLIER NAME</label>
 					 <div class="col-md-4">
 					 <form:input class="form-control input-md" path="sName" ></form:input>
 					 </div>
 				     </div>
 
 <div class="form-group">
-					 <label class="col-md-4 control-label" for="requestName" style="color:#0000FF">SUPPLIER DESCRIPTION</label>
+					 <label class="col-md-4 control-label" for="requestName" style="color:#000000">SUPPLIER DESCRIPTION</label>
 					 <div class="col-md-4">
 					 <form:input class="form-control input-md" path="sDis" ></form:input>
 					 </div>
 				     </div>
 
 <div class="form-group">
-					<label class="col-md-4 control-label" for="comments" style="color:#0000FF"></label>
+					<label class="col-md-4 control-label" for="comments" style="color:#000000"></label>
 					<div class="col-md-4">
 					<input type="Submit" class="btn btn-lg btn-info" value="${bname}"></input>				
 					</div>

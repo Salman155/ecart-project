@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.eshop.dao.CatDao;
+import com.eshop.dao.CategoryDao;
 import com.eshop.model.AdminDetails;
 import com.eshop.model.CategoryDetails;
 import com.eshop.model.ProductDetails;
@@ -21,7 +21,7 @@ public class CategoryController
 	
 	
 	@Autowired
-	CatDao cd;
+	CategoryDao cd;
 	
 	@RequestMapping(value="/cat",method=RequestMethod.GET)
 	public ModelAndView cat()

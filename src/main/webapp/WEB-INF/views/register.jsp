@@ -33,7 +33,7 @@
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="comments" style="color:#0000FF">UserName</label>
 					<div class="col-md-4">
-					<form:textarea class="form-control" path="userName" />
+					<form:textarea class="form-control" path="username" />
 					</div>
 				</div>
 

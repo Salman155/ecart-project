@@ -7,7 +7,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body background="resources/img10.jpg">
+<body background="resources/17.jpg">
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -24,7 +24,7 @@
     
       <li class="active"><a href="home"><span class="fa fa-home" style="font-size:26px"></span></a></li>
        
-       <li class="dropdown"><a href="admin">Admin</a></li>
+      
        
       <li class="dropdown"><a href="product">Product </a></li>
         
@@ -43,6 +43,7 @@
        <ul class="nav navbar-nav navbar-right">
       <li><a href="register"><span class="glyphicon glyphicon-user"></span>Register</a></li>
       <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="perform_logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
       <li><a href="contact"><i class="fa fa-phone" aria-hidden="true"></i>Contact us</a></li>
       <li><a href="aboutus"><i class="fa fa-user" aria-hidden="true"></i>About us</a></li>
     </ul>

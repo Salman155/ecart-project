@@ -14,21 +14,21 @@
 <fieldset>
 
    <div class="form-group">
-					 <label class="col-md-4 control-label" for="requestName" style="color:#0000FF">CATEGORY ID</label>
+					 <label class="col-md-4 control-label" for="requestName" style="color:#000000">CATEGORY ID</label>
 					 <div class="col-md-4">
 					 <form:input class="form-control input-md" path="categoryId" ></form:input>
 					 </div>
 				     </div>
 
  <div class="form-group">
-					 <label class="col-md-4 control-label" for="requestName" style="color:#0000FF">CATEGORY NAME</label>
+					 <label class="col-md-4 control-label" for="requestName" style="color:#000000">CATEGORY NAME</label>
 					 <div class="col-md-4">
 					 <form:input class="form-control input-md" path="categoryName" ></form:input>
 					 </div>
 				     </div>
  
 <div class="form-group">
-					 <label class="col-md-4 control-label" for="requestName" style="color:#0000FF">CATEGORY DESCRIPTION</label>
+					 <label class="col-md-4 control-label" for="requestName" style="color:#000000">CATEGORY DESCRIPTION</label>
 					 <div class="col-md-4">
 					 <form:input class="form-control input-md" path="categoryDescription" ></form:input>
 					 </div>

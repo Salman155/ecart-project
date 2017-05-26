@@ -14,7 +14,7 @@ import com.eshop.model.UserCredentials;
 import com.eshop.model.UserDetails;
 
 @Repository
-public class RegDao 
+public class RegisterDao 
 {
 @Autowired
 SessionFactory sessionFactory;
@@ -35,27 +35,5 @@ public void insertUserCredentails(UserCredentials uc)
 	session.close();
 }
 
-@Transactional
-public UserCredentials getUser(String username) {
-	//creating session object    
-			Session session=sessionFactory.openSession();    
-			    
-			//creating transaction object    
-			Transaction t=session.beginTransaction();    
-	String hql = "from "+" UserCredential "+" where username=" + "'"+username+"'";
-	@SuppressWarnings("rawtypes")
-	Query query = session.createQuery(hql);
-	
-	@SuppressWarnings("unchecked")
-	List<UserCredentials> listUser = (List<UserCredentials>) query.list();
-	
-	if (listUser != null && !listUser.isEmpty()) {
-		return listUser.get(0);
-	}
-	t.commit();//transaction is commited    
-	session.close();  
-	
-	return null;
-}
-
+ 
 }

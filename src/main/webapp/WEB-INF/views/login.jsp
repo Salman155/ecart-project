@@ -9,31 +9,39 @@
 </head>
 <body>
 <%@ include file="userHeader.jsp" %>
-<form:form class="form-horizontal" method="post" action="login"	commandName="UserCredentials" >
+<form action="perform_login" method="post" >
 
     
         <div class="form-group">
+        <div class="col-md-4">
 					<label class="col-md-4 control-label" for="comments" style="color:#0000FF">UserName</label>
-					<div class="col-md-4">
-					<form:textarea class="form-control" path="username" />
+					<input type="text" class="form-control" name="username"/>
 					</div>
+					<br>
+					<br>
+					<br>
 				</div>
 
 		<div class="form-group">
+		<div class="col-md-4">
 					<label class="col-md-4 control-label" for="comments" style="color:#0000FF">Password</label>
-					<div class="col-md-4">
-					<form:password class="form-control" path="password" />
+					<input type="password" class="form-control"  name="password"/>
 					</div>
+					<br>
+					<br>
+					<br>
 				</div>
 				
 	   <div class="form-group">
+	   <div class="col-md-4">
 					<label class="col-md-4 control-label" for="submit"></label>
-					<div class="col-md-4">
                     <input type="submit" class="btn btn-lg btn-info" value="Submit"></input>
 					</div>
+					<br>
+					<br>
 				    </div>
 
 
-</form:form>
+</form>
 </body>
 </html>
